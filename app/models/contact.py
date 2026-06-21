@@ -5,7 +5,7 @@ from typing import Annotated
 
 from pydantic import BaseModel, EmailStr, Field, field_validator
 
-PHONE_PATTERN = re.compile(r"^[\d\s\-()]+$")
+PHONE_PATTERN = re.compile(r"^\+?[\d\s\-()]+$")
 
 
 class ContactRequest(BaseModel):
